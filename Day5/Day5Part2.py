@@ -16,7 +16,8 @@ def part2(crate_stacks, top_crates):
 
             crate_in_order.reverse()                        # Reverse to put crates in order
             crate_stacks[to_stack].extend(crate_in_order)   # Merges crate_stacks[to_stack] with crate_in_order
-
+   
+    # Generates message for the elves                                                                     
     for x in range(9):
         top_crates += crate_stacks[x].pop()
 

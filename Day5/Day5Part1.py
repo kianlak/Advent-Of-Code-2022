@@ -12,7 +12,8 @@ def part1(crate_stacks, top_crates):
             for x in range(num_crate):
                 crate_stacks[to_stack].append(crate_stacks[from_stack].pop())   # Take each crate off a stack and put 
                                                                                 # them onto another stack
-                                                                                
+           
+    # Generates message for the elves                                                                     
     for x in range(9):
         top_crates += crate_stacks[x].pop()
 
