@@ -12,12 +12,10 @@ def part1():
             # Check to see if line is empty or not, if it isn't,
             # keep adding calories onto current_calories.
             # If Line is empty, check to see if there is a 
-            # contending calorie amount
+            # contending calorie amount and then reset calculations
             if line.strip():
                 current_calories += int(line)
             else:
-                # Check to see if there are more calories than most_calories
-                # and then reset current_calories for next calculations
                 if current_calories > most_calories:
                     most_calories = current_calories
                     current_calories = 0
