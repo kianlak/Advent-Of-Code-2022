@@ -3,7 +3,6 @@ import string
 # Calculates the sum_of_priorities based on each groups badge identity
 
 def part2():
-    # Read rucksacks.txt
     with open('rucksacks.txt') as file:
         sum_of_priorities = 0
         grouped_rucksacks = []  # This will be used to group 3 rucksacks at a time for comparison

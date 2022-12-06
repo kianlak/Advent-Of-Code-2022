@@ -3,7 +3,6 @@ import string
 # Calculates the sum_of_priorities based on what exists in the rucksacks list
 
 def part1():
-    # Read rucksacks.txt
     with open('rucksacks.txt') as file:
         sum_of_priorities = 0
         
