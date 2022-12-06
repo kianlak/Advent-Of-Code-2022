@@ -21,7 +21,6 @@ def compare_choices(elf_choice, round_end_type):
     # Refer to main.py lines [9-42] for an explanation for this algorithm
     # Draw
     if round_end_type_value == 3:
-        # Use elf_choice_value since we are tying
         return (elf_choice_value) + round_end_type_value
     # Win
     elif round_end_type_value == 6:
