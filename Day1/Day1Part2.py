@@ -19,25 +19,18 @@ def part2():
             if line.strip():
                 current_calories += int(line)
             else:
-                if current_calories > most_calories[0]:     # Compared to #1 most calories
-                    most_calories[2] = most_calories[1]
-                    most_calories[1] = most_calories[0]
-                    most_calories[0] = current_calories
+                # Checks to see if minimum value from most_calories
+                # can be replaced with a larger calorie number
+                if current_calories > min(most_calories):
+                    most_calories[most_calories.index(min(most_calories))] = current_calories   # Replacing the current 3rd highest calories from the list with current_calories
+                    current_calories = 0
+                else:
+                    current_calories = 0
 
-                    current_calories = 0
-                elif current_calories > most_calories[1]:   # Compared to #2 most calories                    
-                    most_calories[2] = most_calories[1]
-                    most_calories[1] = current_calories
-
-                    current_calories = 0
-                elif current_calories > most_calories[2]:   # Compared to #3 most calories
-                    most_calories[2] = current_calories
-                    current_calories = 0
-                else:                                       # current_calories is too low
-                    current_calories = 0
-    
     for x in range(3):
         total_calories += most_calories[x]
+    
+    most_calories.sort(reverse=True)    # Setting the list in descending order
     
     print("Top 3 calories carried by elves:\n#1 Elf: "
           + str(most_calories[0]) + " calories\n#2 Elf: "
