@@ -2,7 +2,7 @@
 
 def part1():
     # Read calories from each elf
-    with open('carried_calories.txt') as file:
+    with open('elves_carried_calories.txt') as file:
         most_calories = 0       # Most calories found
         current_calories = 0    # Current calories in calculation
         
