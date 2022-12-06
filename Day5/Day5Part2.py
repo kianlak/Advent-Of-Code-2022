@@ -3,7 +3,6 @@ import re
 # This will take multiple crates and move them at once
 
 def part2(crate_stacks, top_crates):
-    # Read instructions from instructions.txt
     with open('instructions.txt') as file:
         for line in file.readlines():
             num_crate, from_stack, to_stack = re.findall(r'\d+', line)  # Extract necessary values to respective variables          

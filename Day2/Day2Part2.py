@@ -41,7 +41,6 @@ def compare_choices(elf_choice, round_end_type):
 def part2():
     your_total_points = 0   # Your Points
     
-    # Read instructions from instructions.txt
     with open('strategy_guide.txt') as file:
         for line in file.readlines():
             

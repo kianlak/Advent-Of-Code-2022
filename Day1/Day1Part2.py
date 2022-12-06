@@ -3,7 +3,6 @@
 def part2():
     total_calories = 0
     
-    # Read calories from each elf
     with open('elves_carried_calories.txt') as file:
         most_calories = [0, 0, 0]   # Top 3 most calories found
         current_calories = 0        # Current calories in calculation

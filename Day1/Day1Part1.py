@@ -1,7 +1,6 @@
 # This will display the most calories carried by an elf
 
 def part1():
-    # Read calories from each elf
     with open('elves_carried_calories.txt') as file:
         most_calories = 0       # Most calories found
         current_calories = 0    # Current calories in calculation
