@@ -26,4 +26,4 @@ def part2():
                 sum_of_priorities += string.ascii_letters.index(found_items[0]) + 1
             
     
-    print("The total sum of priorities is: " + str(sum_of_priorities))
+    print("The total sum of priorities considering badge identities is: " + str(sum_of_priorities))
