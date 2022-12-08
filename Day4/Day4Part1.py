@@ -16,6 +16,6 @@ def part1():
             if((elf1_min_range <= elf2_min_range) and (elf1_max_range >= elf2_max_range) or (elf1_min_range >= elf2_min_range) and (elf1_max_range <= elf2_max_range)):
                 full_contain_total += 1
                 
-        print("There are " + str(full_contain_total) + " fully containing tasks")
+        print("The number of fully containing tasks is: " + str(full_contain_total))
                     
                        

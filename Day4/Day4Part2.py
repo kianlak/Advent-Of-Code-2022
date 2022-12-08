@@ -16,6 +16,6 @@ def part2():
             if(((elf1_min_range >= elf2_min_range) and (elf1_min_range <= elf2_max_range)) or ((elf2_min_range >= elf1_min_range) and (elf2_min_range <= elf1_max_range))):
                 overlapping_total += 1
 
-        print("There are " + str(overlapping_total) + " overlapping tasks")
+        print("There number of overallping tasks is: " + str(overlapping_total))
                     
                        
