@@ -1,20 +1,20 @@
 # Finds the marker of the datastream buffer
 
-def part1(datastream_buffer):
-    current_packet = [] # Keeps track of current packet that is acceptable
-    marker_index = 0    # The marker index
-
+def part2(datastream_buffer):
+    current_packet = []         # Keeps track of current packet that is acceptable
+    message_marker_index = 0    # The message marker index
+    
     # Will go through each character of datastream_buffer 
     # and add them into current_packet. After every addition 
     # into current_packet, we check to see if there is a duplicate 
     # character, if there is, we remove every character up till the 
     # instance of the duplicate character. We keep doing this process 
-    # until curren_packet has 4 elements in it on the start of the 
+    # until curren_packet has 14 elements in it on the start of the 
     # iteration. 
     
     for x in range(len(datastream_buffer)):
         # Checks for final 4 unique character packet
-        if len(current_packet) == 4:
+        if len(current_packet) == 14:
             marker_index = x
             break
 
@@ -26,4 +26,4 @@ def part1(datastream_buffer):
             for _ in range(current_packet.index(datastream_buffer[x]) + 1):
                 current_packet.pop(0)
     
-    print("Marker found at character: " + str(marker_index))    
+    print("Message marker found at character: " + str(marker_index))    
