@@ -15,7 +15,7 @@ def part2(datastream_buffer):
     for x in range(len(datastream_buffer)):
         # Checks for final 4 unique character packet
         if len(current_packet) == 14:
-            marker_index = x
+            message_marker_index = x
             break
 
         current_packet.append(datastream_buffer[x])
@@ -26,4 +26,4 @@ def part2(datastream_buffer):
             for _ in range(current_packet.index(datastream_buffer[x]) + 1):
                 current_packet.pop(0)
     
-    print("Message marker found at character: " + str(marker_index))    
+    print("Message marker found at character: " + str(message_marker_index))    
