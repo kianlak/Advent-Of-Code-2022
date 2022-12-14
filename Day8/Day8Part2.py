@@ -1,9 +1,8 @@
-# Calculates the number of trees that are visibile from outside the grid
+# Calculates the most scenic spot
 
 def part2():
     ROW, COLUMN = [99, 99]                      # Dimensions for the forest map
     forest_grid = [[] for _ in range(COLUMN)]   # Forest map represented by a 2D Array (99x99)
-    trees_visible = 0                           # Number of trees visible
 
 # === Helper Functions Start === #    
     
@@ -53,11 +52,12 @@ def part2():
                 if not ((x == 0) or (y == 0) or (x == (ROW - 1)) or (y == (COLUMN - 1))):
                     tree_house_height = forest_grid[x][y]    # Spot from which we are comparing other tree heights
                     
-                    down_view = check_row_down(x, y, tree_house_height,forest_grid)
-                    up_view = check_row_up(x, y, tree_house_height,forest_grid)
-                    left_view = check_column_left(x, y, tree_house_height,forest_grid)
-                    right_view = check_column_right(x, y, tree_house_height,forest_grid)
+                    down_view = check_row_down(x, y, tree_house_height,forest_grid)         # Checks downwards scenic view
+                    up_view = check_row_up(x, y, tree_house_height,forest_grid)             # Checks upwards scenic view
+                    left_view = check_column_left(x, y, tree_house_height,forest_grid)      # Checks left scenic view
+                    right_view = check_column_right(x, y, tree_house_height,forest_grid)    # Checks right scenic view
                     
+                    # Replace previously calculated most scenic view with new one
                     if most_scenic_spot < (down_view * up_view * left_view * right_view):
                         most_scenic_spot = down_view * up_view * left_view * right_view
         
